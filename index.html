@@ -21,99 +21,40 @@
 
 		Read more - https://getbootstrap.com/docs/4.0/components/navbar/
 	-->
-	<nav class="CLASSES">
-		<!--
-			Hint:
-			Use bootstrap boxed container.
-		-->
-		<div class="CLASSES">
-			<!--
-				Navbar Hamburger Button
+	<nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
 
-				Hint: 
-				Use classes to hide navbar on larger screens.
-				Use data-* values for the dropdown classes to work. 
-				Understand what aria-* values are there form
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+		<a class="navbar-brand" href="#">
+			<img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
+				class="CLASSES" alt="">
+			Bootstrap
+		</a>
+		
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
 
-				Read more - https://getbootstrap.com/docs/4.0/components/navbar/
-			-->
-			<button class="CLASSES" type="button" DATA-ATTRIBUTES ARIA-ATTRIBUTES>
-				<span class="CLASSES"></span>
-			</button>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Features</a>
+			</li>
 
-			<!--
-				Hint:
-				Use class for navbar logos. Make image display inline-block
-			-->
-			<a class="CLASSES" href="#">
-				<img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
-					class="CLASSES" alt="">
-				Bootstrap
-			</a>
-			<!-- 
-				Hint:
-				This portion will be hidden on desktop. On mobile it will collapse/expand based on Navbar Hamburger button
-			-->
-			<div class="CLASSES">
-				<!--
-					Hint:
-					Navbar navigation class. Make this element fill the empty spacing with its next sibling
-				-->
-				<ul class="CLASSES">
-					<!--
-						Hint:
-						Navigation Item and active
-					-->
-					<li class="CLASSES">
-						<!--
-							Hint:
-							Navigation Item Link
-						-->
-						<a class="CLASSES" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<!--
-						Hint:
-						Navigation Item
-					-->
-					<li class="CLASSES">
-						<!--
-							Hint:
-							Navigation Item Link
-						-->
-						<a class="CLASSES" href="#">Features</a>
-					</li>
-				</ul>
-				<!--
-					Hint:
-					Inline form
-				-->
-				<form class="CLASSES">
-					<!--
-						Hint:
-						Group both input and button. Make them appear connected with each other.
-					-->
-					<div class="CLASSES">
-						<!--
-							Hint:
-							Form input classes regular
-						-->
-						<input class="CLASSES" type="search" placeholder="Search" aria-label="Search">
-						<!-- 
-							Hint:
-							Make button appended to input
-						-->
-						<div class="CLASSES">
-							<!--
-								Hint:
-								Regular button with primary background color.
-							-->
-							<button class="CLASSES" type="submit">Search</button>
-						</div>
-					</div>
-				</form>
-			</div>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Pricing</a>
+			</li>
+		  </ul>
+		  <form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+		  </form>
 		</div>
-	</nav>
+		</div>
+	  </nav>
 
 	<section>
 		<!--
@@ -122,39 +63,39 @@
 
 			Read more - https://getbootstrap.com/docs/4.0/components/jumbotron/
 		-->
-		<div class="CLASSES">
+		<div class="jumbotron">
 			<div class="row">
 				<!--
 					Hint:
 					4 column on laptop, 12 on mobile
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-6 col-md-12">
 					<!--
 						Hint:
 						Use the largest font size class. ie display-* classes
 					-->
-					<hi class="CLASSES">Big Hero Display</hi>
+					<hi class="display-4 font-weight-bold">Big Hero </br> Display</hi>
 					<!--
 						Hint:
 						Use class for subtitles.
 					-->
-					<p class="CLASSES">Hero leading text</p>
+					<p class="mt-2">Hero leading text</p>
 				</div>
 				<!--
 					Hint:
 					4 column with 4 column offset on laptop, 12 on mobile
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-6 col-md-12">
 					<!--
 						Hint:
 						Card classes
 					-->
-					<div class="CLASSES">
+					<div class="card">
 						<!--
 							Hint:
 							Card classes (inner)
 						-->
-						<div class="CLASSES">
+						<div class="card-body">
 							<form>
 								<!--
 									Hint:
@@ -162,44 +103,59 @@
 
 									Read More - https://getbootstrap.com/docs/4.0/components/forms/
 								-->
-								<div class="CLASSES">
+
+								<div class="form-group">
+									<label for="input-name">Full Name</label>
+									<!--
+										Hint:
+										Class for input field
+										Understand why aria-describedby is used.
+									-->
+									<input type="email" class="form-control" id="input-email"
+										aria-describedby="emailHelp" placeholder="Your Name">
+								
+									
+								</div>
+
+
+								<div class="form-group">
 									<label for="input-email">Email address</label>
 									<!--
 										Hint:
 										Class for input field
 										Understand why aria-describedby is used.
 									-->
-									<input type="email" class="CLASSES" id="input-email"
+									<input type="email" class="form-control" id="input-email"
 										aria-describedby="emailHelp" placeholder="Enter email">
 									<!--
 										Hint:
 										Make text color muted
 									-->
-									<small id="emailHelp" class="CLASSES">We'll never share your email with
+									<small id="emailHelp" class="form-text text-muted">We'll never share your email with
 										anyone else.</small>
 								</div>
 								<!--
 									Hint:
 									Class for form checkbox wrapper
 								-->
-								<div class="CLASSES">
+								<div class="form-check">
 									<!--
 										Hint:
 										Checkbox specific input classes
 									-->
-									<input type="checkbox" class="CLASSES" id="input-terms">
+									<input type="checkbox" class="form-check-input" id="input-terms">
 									<!--
 										Hint:
 										Checkbox label class
 									-->
-									<label class="CLASSES" for="input-terms">I agree to <a href="#">Terms &
+									<label class="form-check-label" for="input-terms">I agree to <a href="#">Terms &
 											Conditions</a></label>
 								</div>
 								<!--
 									Hint:
 									Regular Button With Primary Color
 								-->
-								<button type="submit" class="CLASSES">Submit</button>
+								<button type="submit" class="btn btn-primary">Submit</button>
 							</form>
 						</div>
 					</div>
@@ -208,25 +164,30 @@
 		</div>
 	</section>
 
+
+
+
+
+
 	<!--
 		Hint:
 		Use vertical only padding of 5 units (ie. p-*)
 	-->
-	<section class="CLASSES">
+	<section class="py-5">
 		<div class="container">
 			<!--
 				Hint:
 				This will be a row class and
 				Use flex class to align items centered
 			-->
-			<div class="CLASSES">
+			<div class="row d-flex justify-content-between align-items-center">
 				<!--
 					Hint:
 					5 Column on laptop, 12 on mobile.
 					Item displayed first on laptop, second on mobile
 					Text is right aligned on laptop, center aligned on mobile
 				-->
-				<div class="CLASSES">
+				<div class="mb-2 col-lg-4 col-md-12 text-lg-right text-md-center">
 					<h3>Some Heading</h3>
 					<!-- 
 						Hint:
@@ -238,54 +199,59 @@
 						Hint:
 						Outline button with green color
 					-->
-					<button class="CLASSES">Learn More</button>
+					<button class="btn btn-outline-success">Learn More</button>
 				</div>
 				<!--
 					Hint:
 					7 Column on laptop, 12 on mobile.
 					Item displayed second on laptop, first on mobile
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-8 col-md-12">
 					<!--
 						Hint:
 						Image takes full width of the container and has rounded edges
 					-->
-					<img class="CLASSES" src="https://picsum.photos/800/600">
+					<img class="rounded img-fluid" src="https://picsum.photos/800/600">
 				</div>
 			</div>
 		</div>
 	</section>
+
+
+
+
+
 
 	<!--
 		Hint:
 		Green background
 		Use vertical only padding of 5 units (ie. p-*)
 	-->
-	<section class="CLASSES">
+	<section class="bg-success">
 		<!--
 			Hint:
 			Conatiner class goes here.
 			Child nodes (rows) will be ordered differently on mobile and laptop.
 			To achieve this use flex direction classes here
 		-->
-		<div class="CLASSES">
+		<div class="container">
 			<!--
 				Hint:
 				Row class goes here
 				5 Units of padding bottom (ie. p-*)
 				Always on top for mobile and desktop 
 			-->
-			<div class="CLASSES">
+			<div class="col-lg-12 col-md-12 py-5">
 				<!--
 					Hint:
 					12 column, text centered
 				-->
-				<div class="CLASSES">
+				<div class="text-center">
 					<!--
 						Hint:
 						Text color will be white
 					-->
-					<h2 class="CLASSES">Our Journey</h2>
+					<h2 class="text-center text-white">Our Journey</h2>
 				</div>
 			</div>
 			<!--
@@ -297,37 +263,37 @@
 				
 				Read More - https://getbootstrap.com/docs/4.0/utilities/flex/
 			-->
-			<div class="CLASSES">
+			<div class="d-flex justify-content-around align-items-end row">
 				<!--
 					Hint:
 					4 column on laptop, 12 on mobile
 					3 units of margin bottom
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-6 col-md-12 ">
 					<!--
 						Hint:
 						This is a card.
 						Use card wrapper, header, body and footer classes
 					-->
-					<div class="CLASSES">
-						<div class="CLASSES">
+					<div class="card mb-2">
+						<div class="card-header">
 							<!--
 								Hint:
 								Use red colored rounded badges
 
 								Read more - https://getbootstrap.com/docs/4.0/components/badge/
 							-->
-							Card Title <span class="CLASSES">New</span>
+							Card Title <span class="badge badge-danger badge-pill">New</span>
 						</div>
-						<div class="CLASSES">
+						<div class="card-body">
 							Card Body Text
 						</div>
-						<div class="CLASSES">
+						<div class="card-footer">
 							<!--
 								Hint:
 								Dark button
 							-->
-							<button class="CLASSES">Action</button>
+							<button class="btn btn-dark">Action</button>
 						</div>
 					</div>
 				</div>
@@ -336,17 +302,14 @@
 					4 column on laptop, 12 on mobile
 					3 units of margin bottom
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-6 col-md-12">
 					<!--
 						Hint:
 						This is a card.
 						Use card wrapper, image, and body classes
 					-->
-					<div class="CLASSES">
-						<img class="CLASSES" src="https://picsum.photos/400/300">
-						<div class="CLASSES">
-
-						</div>
+					<div class="card">
+						<img class="card-body img-fluid" src="https://picsum.photos/400/300">
 					</div>
 				</div>
 			</div>
@@ -359,21 +322,21 @@
 				
 				Read More - https://getbootstrap.com/docs/4.0/utilities/flex/
 			-->
-			<div class="CLASSES">
+			<div class="row d-flex justify-content-between">
 				<!--
 					Hint:
 					4 column on laptop, 12 on mobile
 					3 units of margin bottom
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-4 col-md-12 mt-3">
 					<!--
 						Hint:
 						Blue alert with themeed link
 
 						Read More - https://getbootstrap.com/docs/4.0/components/alerts/
 					-->
-					<div class="CLASSES" role="alert">
-						This is a primary alert with <a href="#" class="CLASSES">an example link</a>. Give it a click
+					<div class="alert alert-primary" role="alert">
+						This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click
 						if you like.
 					</div>
 				</div>
@@ -382,15 +345,15 @@
 					4 column on laptop, 12 on mobile
 					3 units of margin bottom
 				-->
-				<div class="CLASSES">
+				<div class="col-lg-4 col-md-12 mb-5 mt-lg-3">
 					<!--
 						Hint:
 						Green alert with themed link
 
 						Read More - https://getbootstrap.com/docs/4.0/components/alerts/
 					-->
-					<div class="CLASSES" role="alert">
-						This is a primary alert with <a href="#" class="CLASSES">an example link</a>. Give it a click
+					<div class="alert alert-success" role="alert">
+						This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click
 						if you like.
 					</div>
 				</div>
@@ -402,7 +365,7 @@
 		Hint:
 		Use vertical only padding of 5 units (ie. p-*)
 	-->
-	<section class="CLASSES">
+	<section class="p-5">
 		<div class="container">
 			<div class="row">
 				<!--
@@ -413,8 +376,8 @@
 
 					Read more - https://getbootstrap.com/docs/4.0/components/navs/
 				-->
-				<div class="CLASSES" id="tabs" DATA-ATTRIBUTES>
-					<a class="nav-link active" >Tab 1</a>
+				<div class="col-lg-4 col-md-6" id="tabs" DATA-ATTRIBUTES>
+					<a class="list-group-item nav-link active">Tab 1</a>
 					<a class="nav-link" id="tab-2" >Tab 2</a>
 				</div>
 				<!--
@@ -422,7 +385,7 @@
 					Colum 8
 					Tab content holder
 				-->
-				<div class="CLASSES" id="tab-content">
+				<div class="col-lg-8 col-md-6" id="tab-content">
 					<!--
 						Hint:
 						Active tab
@@ -434,29 +397,22 @@
 							This is a list group.
 							Read more - https://getbootstrap.com/docs/4.0/components/list-group/
 						-->
-						<div class="CLASSES">
-							<a href="#" class="CLASSES">
-								<div class="CLASSES">
-									<h5 class="CLASSES">List group item heading</h5>
-									<small class="CLASSES">3 days ago</small>
+						<div class="list-group">
+							<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small class="text-muted">3 days ago</small>
 								</div>
-								<p class="CLASSES">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
 									risus varius blandit.</p>
-								<small class="CLASSES">Donec id elit non mi porta.</small>
+								<small class="text-muted">Donec id elit non mi porta.</small>
 							</a>
-							<li class="CLASSES">
+							<li class="list-group-item d-flex justify-content-between align-items-center">
 								Cras justo odio
-								<span class="CLASSES">14</span>
+								<span class="badge badge-primary badge-pill">14</span>
 							</li>
 						</div>
 
-					</div>
-					<div class="CLASSES">
-						Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint
-						duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu
-						aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat
-						commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu
-						deserunt excepteur ea incididunt minim occaecat.
 					</div>
 				</div>
 				<!-- </div> -->
@@ -464,19 +420,22 @@
 		</div>
 	</section>
 
+
+
+
 	<!--
 		Hint:
 		Look for bootstrap footer classes
 		Light background
 		Vertical padding of 3 units
 	-->
-	<footer class="CLASSES">
+	<footer class="py-2 bg-secondary text-center text-light">
 		<div class="container">
 			<!--
 				Hint:
 				Text muted color
 			-->
-			<span class="CLASSES">This is a footer</span>
+			<span class="lead">This is a footer</span>
 		</div>
 	</footer>
 
